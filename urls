@@ -1,0 +1,18 @@
+URLs
+			empleados
+	get		curl http://localhost:3000/verempleadosid/1 
+	post		curl -d '{"nombre":"Daniel", "apellido1":"daniels","apellido2":"denian","telefono":"87789669","correo":"daniel@gmail.com","idpuesto":"2","salario":"5000"}' -H "Content-Type: application/json" -X POST http://localhost:3000/InsertEmpleado
+	put 		curl -d '{"salario":"9000"}' -H "Content-Type: application/json" -X PUT http://localhost:3000/FijarSalarioEmpleado/1
+	delete		curl -X DELETE http://localhost:3000/EliminarEmpleado/2 
+
+			libros
+	get		curl http://localhost:3000/VerLibrosPorTitulo/soledad
+	post		curl -d '{"titulo":"Blablabla", "año":"01/01/2000","edicion":"4","editorial":"Sudamericana","idioma":"Español","idautor":"25"}' -H "Content-Type: application/json" -X POST http://localhost:3000/InsertLibro
+	put 		curl -d '{"titulo":"Cada suspiro 2"}' -H "Content-Type: application/json" -X PUT http://localhost:3000/ModificarTituloLibro/5
+	delete		curl -X DELETE http://localhost:3000/EliminarLibro/2
+			
+			prestamos
+	get		curl http://localhost:3000/VerPrestamosPorUsuario/5
+	post		curl -d '{"idusuario":"6", "idempleado":"7","fechadev":"10/04/2021","idlibro":"12"}' -H "Content-Type: application/json" -X POST http://localhost:3000/NuevoPrestamo
+	put 		curl -X PUT http://localhost:3000/ModificarEstadoPrestamo/12
+	delete		curl -X DELETE http://localhost:3000/EliminarPrestamo/12
